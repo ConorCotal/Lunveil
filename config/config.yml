@@ -1,0 +1,289 @@
+Verified_Role_ID: 1412749267247955968
+
+Tickets:
+  Ticket_Role_ID: 1408886895819100181
+  
+KP:
+  Bypass_Roles:
+    - role: 1445019946479255674
+      limit: 999
+
+    - role: 1445013591999647879
+      limit: 2
+
+  Announce_ID: 1513414941283975281
+  Channel_ID: 1513414870094053396
+  Recruiter_Role: 1445019084474552440
+  Thread_Name: "KP | {title}"
+
+  Messages:
+    sending_panel: "Wysyłam panel.."
+    dont_have_kp: "Nie masz żadnej KP do edycji."
+    kp_limit_reached: "Masz już stworzone KP! Nie możesz mieć więcej niż {limit} jednocześnie."
+    not_owner: "Nie jesteś właścicielem tej KP!"
+    thread_not_registered: "Ten wątek nie jest zarejestrowany w systemie KP. Zgłoś to administracji."
+    edit_kp_requested: "Twoja proźba o edycję KP oczekuja na zatwierdzenie przez rekrutera."
+
+  Embeds: 
+    PANEL:
+      title: "Stwórz swoją Kartę Postaci"
+      color: TEAL
+
+    KP_CREATED:
+      title: "Twoja Karta Postaci została stworzona!"
+      color: INFO
+      fields:
+        - name: " "
+          value: "[`[Kliknij Tutaj Aby Wejść]`]({thread})"
+          inline: false
+
+    KP_OPTIONS:
+      title: "Opcje Tworzenia KP"
+      description: ">>> Wybierz metodę tworzenia Karty Postaci:"
+      color: TEAL
+      fields:
+        - name: "`[Aktualnie niedostępne]`"
+          value: ">>> Użyj tego przycisku, aby stworzyć swoją kartę postaci od podstaw. Kreator przeprowadzi Cię przez proces tworzenia karty, zadając pytania i pomagając w wyborze umiejętności, cech i innych elementów Twojej postaci."
+          inline: true
+        - name: "`Klasyczna Karta`"
+          value: ">>> Użyj tego przycisku, jeśli chcesz stworzyć kartę postaci w stylu OG. Dostaniesz prosty formularz do wypełnienia, który pozwoli Ci szybko stworzyć kartę postaci bez konieczności przechodzenia przez kreator."
+          inline: true
+        - name: "`Przenieś Kartę`"
+          value: ">>> Użyj tego przycisku, jeśli chcesz przenieść swoją kartę postaci z innego serwera."
+          inline: true
+
+    OG_KP:
+      title: "Stwórz Klasyczną Kartę"
+      description: ">>> Wypełnij poniższy szablon, aby stworzyć swoją kartę postaci w stylu OG. Możesz dodać dodatkowe sekcje, jeśli chcesz, ale pamiętaj, że im bardziej szczegółowa karta, tym lepiej!"
+      color: TEAL
+      fields:
+        - name: " "
+          value: "{template}"
+          inline: false
+
+    TRANSFER_KP:
+      title: "Przenieś Kartę Postaci"
+      description: ">>> Aby przenieść swoją kartę postaci z innego serwera, po prostu wklej jej zawartość w tym kanale. Upewnij się, że karta jest dobrze sformatowana i zawiera wszystkie niezbędne informacje. Po przesłaniu karty, zostanie ona zweryfikowana przez rekrutera."
+      color: TEAL
+
+    EDIT_ANNOUNCE:
+      title: "Proźba o Edycję"
+      description: "{user} chce edytować {thread}."
+      color: INFO
+      fields:
+        - name: " `Powód Edycji:` "
+          value: "{reason}"
+
+    EDIT_DONE:
+      title: "Edycja {status}"
+      description: "Obsłużone przez {user} dla {thread}."
+      color: SUCCESS
+
+    EDIT_REJECTED:
+      title: "Edycja odrzucona"
+      description: "Twoja proźba o edycję {thread} została odrzucona przez rekrutera."
+      color: RED
+      fields:
+        - name: "`Powód Odrzucenia:`"
+          value: "{reason}"
+
+    KP_TO_CONFIRM:
+      title: "KP do zatwierdzenia"
+      description: "{thread} KP stworzona przez {user} oczekuje na zatwierdzenie."
+      color: INFO
+
+    KP_STATUS:
+      title: "Karta {status}"
+      color: INFO
+
+    KP_CONFIRMED:
+      title: "Karta {status}"
+      description: "Obsłużone przez {user} dla {thread}."
+      color: TEAL
+
+  Buttons:
+    CREATE_KP:
+      label: "Stwórz KP"
+      emote: "📝"
+      style: PRIMARY
+      enabled: true
+    EDIT_KP:
+      label: "Edytuj KP"
+      emote: "✏️"
+      style: PRIMARY
+      enabled: true
+
+    KP_CREATOR:
+      label: "[Aktualnie niedostępne]"
+      emote: ""
+      style: PRIMARY
+      enabled: false
+    OG_KP:
+      label: "Klasyczna Karta"
+      emote: ""
+      style: PRIMARY
+      enabled: true
+    TRANSFER_KP:
+      label: "Transfer KP"
+      emote: ""
+      style: PRIMARY
+      enabled: true
+
+    DONE:
+      label: "Zakończ"
+      emote: "✔️"
+      style: SUCCESS
+      enabled: true
+    CANCEL:
+      label: "Anuluj"
+      emote: "✖️"
+      style: DANGER
+      enabled: true
+
+    EDIT_CONFIRM:
+      label: "Zatwierdź Edycję"
+      emote: "✔️"
+      style: SUCCESS
+      enabled: true
+    EDIT_CANCEL:
+      label: "Odrzuć Edycję"
+      emote: "✖️"
+      style: DANGER
+      enabled: true
+
+    KP_TO_CONFIRM:
+      label: "Zatwierdź KP"
+      emote: "✔️"
+      style: SUCCESS
+      enabled: true
+    KP_TO_CONFIRM_REJECT:
+      label: "Odrzuć KP"
+      emote: "✖️"
+      style: DANGER
+      enabled: true
+
+    EDIT_DONE:
+      label: "Zakończ Edycję"
+      emote: "✔️"
+      style: SUCCESS
+      enabled: true
+
+  Modals:
+    SET_KP_TITLE:
+      title: "Tytuł KP"
+      label: "Podaj tytuł Twojej Karty Postaci"
+      default: "{user}"
+
+    CANCEL_CONFIRMATION:
+      title: "To spowoduje usunięcie wątku"
+      label: "Czy na pewno chcesz kontynuować?"
+
+    CONFIRM_CONFIRMATION:
+      title: "To spowoduje zablokowanie wątku"
+      label: "Czy na pewno chcesz kontynuować?"
+
+    EDIT_KP:
+      title: "Edytuj KP"
+      inputs:
+      - input:
+          label: "Wybierz którą kartę chcesz edytować:"
+      - input:
+          label: "Powód Edycji:"
+          placeholder: "Podaj dobry powód dla którego chcesz edytować KP."
+
+    EDIT_REJECTED:
+      title: "Odrzuć Edycję"
+      inputs:
+      - input:
+          label: "Powód Odrzucenia:"
+          placeholder: "Podaj powód dla którego odrzucasz proźbę o edycję."
+
+  Template: |
+    `**Nick z MC:**`
+    `**Nazwa twojej postaci:**` (imię oraz jeśli obecny to pseudonim)
+    `**Wiek twojej postaci:**`
+    `**Pochodzenie:**` (nazwa serwera z którego pochodzi twoja postać, nazwa fikcyjnej krainy z której pochodzi, itp..)
+    `**Cele postaci:**` (cele które ma twoja postać po przejściu przez wyrwę)
+    `**Charakter:**` (charakter postaci osobowość itp. (W punktach bądź zdaniach))
+    `**Historia:**` (sensowna historia postaci, kończąca się wciągnięciem przez, swego rodzaju wyrwę w czasoprzestrzeni.)
+    `**Wygląd postaci:**` (podeślij screena swojej postaci, możesz też dodatkowo napisać krótki opis)
+
+    Opcjonalnie można dodać własne podpunkty. 
+    Parę przykładów:
+    > `**Ciekawostki:**`
+    > `**Słabe i Mocne Strony:**`
+    
+NewTickets:
+  Ticket_Role_ID: 1408886895819100181
+  Thread_Name: "{type} | {user}"
+  
+  Messages:
+    not_owner: "Nie jesteś właścicielem tego ticketu!"
+    thread_not_registered: "Ten wątek nie jest zarejestrowany w systemie ticketów."
+    sending_panel: "Wysyłanie panelu ticketów..."
+    no_messages: "Nie znaleziono żadnych wiadomości użytkownika do przesłania."
+    claimed: "✅ **{user}** zajął ticket!"
+    unknown_button: "Nieznany przycisk."
+    error_thread: "Ten kanał nie pozwala na tworzenie wątków."
+    system_error: "Błąd systemu: Brak zarejestrowanego handlera dla tej akcji."
+    creator_error: "# Koniecznie skontaktuj się z administratorem.\n\n> Wystąpił błąd: {error}\n-# Creator.py"
+
+  Embeds:
+    MC_TICKET:
+      title: "Serwis Minecraft"
+      description: "> Sprawy związane z serwisem Minecraft."
+      color: DARK_GREEN
+    OTHER_TICKET:
+      title: "Ogólne"
+      description: "> Sprawy Ogólne."
+      color: DARK_GREEN
+    INFO:
+      title: "Informacje o użytkowniku"
+      description: "> Poniżej znajdują się informacje o użytkowniku, który utworzył ticket."
+      color: BLUE
+      footer: "RiftTales"
+    MESSAGE:
+      title: "Nowy Ticket"
+      description: "> Ticket został utworzony, oraz Admity zostali powiadomieni. Prosimy o cierpliwość, wkrótce ktoś się zajmie Twoją sprawą. Do tego czasu możesz dopisać więcej szczegółów do swojego zgłoszenia. Pamietaj, że to kanał z ustawionym __**Trybem Powolnym na 2 Minuty**__ aby uniknąć spamu, staraj się wysyłać po jednej wiadomości. Kiedy ktoś **Zajmie** twój ticket ten **Limit** zostanie zdjęty."
+      color: BLURPLE
+      footer: "RiftTales"
+    SERVICE:
+      title: "Panel Obsługi Ticketu"
+      description: ""
+      color: DARK_GREEN
+      footer: "RiftTales"
+    CLOSE:
+      title: "Ticket Zamknięty"
+      description: "> Ticket został zamknięty przez {user}"
+      color: RED
+      footer: "RiftTales"
+    EVENT:
+      title: "🎉  Podanie o Event  🎉"
+      description: "> Poniżej znajdują się szczegóły podania o event."
+      color: GOLD
+      footer: "RiftTales"
+    HELP:
+      title: "🙏  Potrzebuję Pomocy  🙏"
+      description: "> Poniżej znajdują się szczegóły zgłoszenia pomocy."
+      color: ORANGE
+      footer: "RiftTales"
+    CK:
+      title: "💀  Character Kill  💀"
+      description: "> Poniżej znajdują się szczegóły zgłoszenia CK."
+      color: DARK_RED
+      footer: "RiftTales"
+    REPORT_PLAYER:
+      title: "👤  Zgłoszenie Gracza  👤"
+      description: "> Poniżej znajdują się szczegóły zgłoszenia gracza."
+      color: DARK_ORANGE
+      footer: "RiftTales"
+    REPORT_ERROR:
+      title: "👾  Zgłoszenie Błędu  👾"
+      description: "> Poniżej znajdują się szczegóły zgłoszenia błędu."
+      color: DARK_PURPLE
+      footer: "RiftTales"
+    CONTACT:
+      title: "✉️  Kontakt  ✉️"
+      description: "> Poniżej znajdują się szczegóły zgłoszenia kontaktowego."
+      color: BLURPLE
+      footer: "RiftTales"
