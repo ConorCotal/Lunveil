@@ -230,9 +230,14 @@ class ManageHandler:
         )
 
         try:
-            await thread.edit(archived=True, locked=True)
+            if custom_id == "kp_to_confirm":
+                # Zatwierdzenie: zamykamy i blokujemy wątek
+                await thread.edit(archived=True, locked=True)
+            else:
+                # Odrzucenie: tylko blokujemy pisanie, nie zamykamy (nie archiwizujemy)
+                await thread.edit(locked=True)
         except discord.HTTPException:
-            logger.exception("Failed to close reviewed KP thread thread_id=%s", thread.id)
+            logger.exception("Failed to update reviewed KP thread thread_id=%s", thread.id)
         log_action(
             "kp_review_completed",
             interaction,

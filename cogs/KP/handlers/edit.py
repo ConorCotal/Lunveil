@@ -2,7 +2,7 @@ import discord
 
 from ..UI import EmbedType
 from ..logging_utils import log_action, logger
-from ..threads import resolve_kp_thread, thread_id_from_mention
+from ..threads import resolve_kp_thread, resolve_kp_thread_from_mention, thread_id_from_mention
 from config.Manager import ConfigManager
 
 config = ConfigManager()
@@ -118,17 +118,14 @@ class EditHandler:
                                 user_id,
                             )
 
-            async for message in thread.history(limit=1, oldest_first=True):
-                if message.embeds:
-                    embed = message.embeds[0]
-                    parent_channel = interaction.guild.get_channel(config.KP.Channel_ID)
-                    if parent_channel is None:
-                        raise RuntimeError(f"KP parent channel not found: {config.KP.Channel_ID}")
-                    await parent_channel.set_permissions(
-                        owner,
-                        send_messages_in_threads=embed.title != config.KP.Embeds.KP_OPTIONS.title,
-                    )
-                    break
+            # Przywróć graczowi prawo do pisania w wątkach KP (w tym w jego KP)
+            parent_channel = interaction.guild.get_channel(config.KP.Channel_ID)
+            if parent_channel is None:
+                raise RuntimeError(f"KP parent channel not found: {config.KP.Channel_ID}")
+            await parent_channel.set_permissions(
+                owner,
+                send_messages_in_threads=True,
+            )
 
             if thread.archived:
                 await thread.edit(archived=False)
