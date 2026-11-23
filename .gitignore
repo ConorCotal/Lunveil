@@ -8,3 +8,6 @@ __pycache__/
 *.log
 /cogs/KP/database.json
 /cogs/NewTickets/database.json
+/cogs/PlayerList/player_list.txt
+backups/
+.vscode/launch.json
