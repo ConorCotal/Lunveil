@@ -1,0 +1,10 @@
+.env
+.venv/
+.local/
+.cache/
+logs/
+__pycache__/
+*.py[cod]
+*.log
+/cogs/KP/database.json
+/cogs/NewTickets/database.json
